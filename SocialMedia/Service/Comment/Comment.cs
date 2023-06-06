@@ -1,20 +1,23 @@
 ﻿namespace SocialMedia.Service.Comment
 {
-    class Comment
+    public class Comment
     {
-        public string Message { get; }
-        public int ID { get; }
-        public DateTime CreatedDate { get; }
-        public Post.Post BelongsToPost { get; }
-        public bool IsModerated { get; set; }
+        public string Message { get; set; }
+        public int ID { get; set; }
 
-        public Comment(string message, int id, DateTime createdDate, Post.Post post)
+        public DateTime Created { get; set; }
+
+        public Post.Post BelongsToPost { get; set; }
+
+        public bool isModerated { get; set; }
+
+        public Comment(string message, int iD, DateTime created, Post.Post belongsTo, bool isModerated)
         {
             Message = message;
-            ID = id;
-            CreatedDate = createdDate;
-            BelongsToPost = post;
-            IsModerated = false;
+            ID = iD;
+            Created = created;
+            BelongsToPost = belongsTo;
+            this.isModerated = isModerated;
         }
     }
 }

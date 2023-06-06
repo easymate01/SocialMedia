@@ -1,24 +1,27 @@
 ﻿namespace SocialMedia.Service.Post
 {
-    abstract class Post
+    public class Post
     {
         public string Title { get; }
         public string Message { get; }
-        public int ID { get; }
+        public int ID { get; set; }
         public DateTime CreatedDate { get; }
-        public Page.Page BelongsToPage { get; }
+
+        public Page.Page PageId { get; }
+
         public List<Comment.Comment> Comments { get; }
 
-        public Post(string title, string message, int id, DateTime createdDate, Page.Page page)
+
+        public Post(string title, string message, int id, DateTime createdDate, Page.Page pageId)
         {
             Title = title;
             Message = message;
             ID = id;
             CreatedDate = createdDate;
-            BelongsToPage = page;
+            PageId = pageId;
             Comments = new List<Comment.Comment>();
+
         }
+
     }
-
-
 }
