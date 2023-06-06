@@ -20,19 +20,5 @@
         }
     }
 
-    class Announcement : Post
-    {
-        public Announcement(string title, string message, int id, DateTime createdDate, Page.Page page)
-            : base(title, message, id, createdDate, page)
-        {
-        }
-    }
 
-    class RegularPost : Post
-    {
-        public RegularPost(string title, string message, int id, DateTime createdDate, Page.Page page)
-            : base(title, message, id, createdDate, page)
-        {
-        }
-    }
 }

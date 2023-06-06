@@ -1,7 +1,10 @@
 ﻿// Create a page
+using SocialMedia.Action.Announcement;
+using SocialMedia.Action.RegularPost;
 using SocialMedia.Service.Comment;
 using SocialMedia.Service.Page;
 using SocialMedia.Service.Post;
+
 
 var page = new Page
 {
